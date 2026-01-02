@@ -3,9 +3,11 @@ package dev.ankis.adk.agents.complex.tools;
 import com.google.adk.tools.Annotations;
 
 import java.util.Map;
+import java.util.Random;
 
 public class StockTickerTools {
     static Map<String, String> stockPrices = Map.of("GOOG", "300");
+    public static final Random RANDOM = new Random();
 
     @Annotations.Schema(
             name = "lookup_stock_ticker",
@@ -18,6 +20,6 @@ public class StockTickerTools {
             )
             String ticker
     ) {
-        return Map.of(ticker, stockPrices.getOrDefault(ticker, "500"));
+        return Map.of(ticker, stockPrices.getOrDefault(ticker,  String.valueOf(RANDOM.nextDouble() * 300)));
     }
 }

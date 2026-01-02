@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>dev.ankis</groupId>
+    <artifactId>adk-samples</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>adk-samples</name>
+    <description>Demo project to create ai agents with ADK</description>
+    <properties>
+        <adk.version>0.5.0</adk.version>
+        <!-- Specify the version of Java you'll be using -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Increase payload size for messages containing heavy content -->
+        <org.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE>10485760</org.apache.tomcat.websocket.DEFAULT_BUFFER_SIZE>
+        <!-- Increase request timeout for long-running agent interactions -->
+        <spring.mvc.async.request-timeout>600000</spring.mvc.async.request-timeout>
+    </properties>
+
+    <dependencies>
+        <!-- The ADK core dependency -->
+        <dependency>
+            <groupId>com.google.adk</groupId>
+            <artifactId>google-adk</artifactId>
+            <version>${adk.version}</version>
+        </dependency>
+        <!-- The ADK dev web UI to debug your agent -->
+        <dependency>
+            <groupId>com.google.adk</groupId>
+            <artifactId>google-adk-dev</artifactId>
+            <version>${adk.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

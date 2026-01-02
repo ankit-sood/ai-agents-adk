@@ -33,6 +33,18 @@
             <version>${adk.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Dependency to use ADK with different models -->
+        <dependency>
+            <groupId>com.google.adk</groupId>
+            <artifactId>google-adk-langchain4j</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+        <!-- Dependency Ends -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

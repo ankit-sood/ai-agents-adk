@@ -49,7 +49,7 @@ public class CodeGenerator {
                 .description("Agent to write and refine the java code")
                 .model("gemini-2.5-flash")
                 .instruction("""
-                        You are an expert in writting java code based on user's request.
+                        You are an expert in writing java code based on user's request.
                         In the first turn, write the initial version of the code. In subsequent turns, you will receive
                         the feedback on your code. Your task is to refine the code based on this feedback.
                         
